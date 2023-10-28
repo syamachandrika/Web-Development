@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="temperature.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="heading">Temperature Converter</h1>
+        <div class="temp-container">
+            <label for="Celcius"><b>Celcius</b></label>
+            <input onchange="computeTemp(event)" type="number" name="Celcius" id="Celcius" class="Celcius" placeholder="Enter Temperature">
+        </div>
+        <div class="temp-container">
+            <label for="Farenheit">Farenheit</label>
+            <input onchange="computeTemp(event)" type="number" name="Farenheit" id="Farenheit" class="Farenheit" placeholder="Enter Temperature">
+        </div>
+        <div class="temp-container">
+            <label for="Kelvin">Kelvin</label>
+            <input onchange="computeTemp(event)" type="number" name="Kelvin" id="Kelvin" class="Kelvin" placeholder="Enter Temperature">
+        </div>
+    </div>
+    <script>
+        const CelciusE1=document.getElementById("Celcius");
+        const FarenheitE1=document.getElementById("Farenheit");
+        const KelvinE1=document.getElementById("Kelvin");
+        function computeTemp(){
+            console.log(event.target.name);
+            const currentValue= +event.target.value;
+            switch (event.target.name) {
+                case "Celcius":
+                    KelvinE1.value=currentValue+273.15;
+                    FarenheitE1.value=currentValue*1.8+32;
+                    break;
+                case "Farenheit":
+                    KelvinE1.value=(currentValue-32)/1.8+273.15;
+                    CelciusE1.value=(currentValue-32)/1.8;
+                    break;
+                case "Kelvin":
+                    CelciusE1.value=currentValue-273.15;
+                    FarenheitE1.value=(currentValue-273.15)*1.8+32;
+                    break;
+    
+                default:
+                    break;
+            }
+
+            
+        }
+    </script>
+</body>
+</html>

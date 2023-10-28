@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy_14NKyknTG9kV9zTyjPaTuCn3d3jUSCTWV2vXTu6w2MG_QrwPH9SP6JDo_iKTID7KvY&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Times new roman', cursive;
+    color: rgb(195, 88, 183);
+
+
+}
+.mark{
+    font-size: 70px;
+
+    color: blue;
+
+}
+.container{
+    background: rgba(107, 206, 185, 0.738);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+    width: 85%;
+    max-width: 450px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    font-size: 35px;
+}
+.temp-container{
+    width: 100%;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 28px;
+}
+input{
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    width: 220px;
+    float: right;
+    padding: 5px;
+    outline: none;
+    background: rgba(0,0,0,0.3);
+    border-color: rgba(0,0,0,0.6);
+}
+input::placeholder{
+    color: rgb(98, 87, 61);
+}
